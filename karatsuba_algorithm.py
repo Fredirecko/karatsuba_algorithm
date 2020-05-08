@@ -32,28 +32,15 @@ def karatsubaAlgorithm(x,y):
         parts_x = [x[i:i+n] for i in range(0, len(x), n)]
         parts_y = [y[i:i+m] for i in range(0, len(y), m)]
 
-        print(parts_x)
-        print(parts_y)
-
         a,b = int(parts_x[0]), int(parts_x[1])
         c,d = int(parts_y[0]), int(parts_y[1])
 
-        print(a)
-        print(b)
-        print(c)
-        print(d)
-
     step_one = a*c
-    print(step_one)
     step_two = b*d
-    print(step_two)
     step_three = (a+b)*(c+d)
-    print(step_three)
     step_four = step_three - step_one - step_two
-    print(step_four)
     step_five = (step_one*10000)+(step_four*100)+step_two
-
-    return step_five
+    print(step_five)
 
 
 
@@ -76,9 +63,16 @@ def countDigits(number):
 
 
 
-
-
-check_function = karatsubaAlgorithm(5678,1234)
-test_function = karatsubaAlgorithm(9,9)
-print(check_function)
-print(test_function)
+print("")
+print("Enter a number with an even amount digits. Example: '1379' has 4 digits or '489327' has 6 digits.")
+print("")
+number_one = int(input())
+print("")
+print("Enter a second number with the same number of digits as your first number. Example: If your first number is 2345, which is four digits, your second number could be 9023 which is also four digits.")
+print("")
+number_two = int(input())
+print("")
+print("This is the product of your two numbers:")
+print("")
+karatsubaAlgorithm(number_one,number_two)
+print("")
